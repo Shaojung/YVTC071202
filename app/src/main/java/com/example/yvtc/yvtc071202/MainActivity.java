@@ -3,6 +3,7 @@ package com.example.yvtc.yvtc071202;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btn2.setText("Click Me 222");
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
+        btn2.setLayoutParams(params);
+
         LinearLayout layout = (LinearLayout) findViewById(R.id.layout1);
         layout.addView(btn);
         layout.addView(btn2);
